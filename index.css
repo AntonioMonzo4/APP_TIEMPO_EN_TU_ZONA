@@ -1,0 +1,131 @@
+/* Aplica la fuente 'Roboto' a todos los elementos de la página */
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos para el cuerpo del documento */
+body {
+  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+  display: flex; /* Usa flexbox para el diseño del cuerpo */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  background-color: #2A3D45; /* Color de fondo del cuerpo */
+}
+
+/* Estilos para el contenedor principal */
+.contaier {
+  background-color: #DDC9B4; /* Color de fondo del contenedor */
+  padding: 20px; /* Espacio interno de 20px alrededor */
+  color: #2A3D45; /* Color del texto */
+  display: flex; /* Usa flexbox para el diseño interno */
+  display: none; /* Inicialmente oculto */
+}
+
+/* Estilos para los bloques dentro del contenedor */
+.contaier > .block {
+  padding: 20px; /* Espacio interno de 20px */
+}
+
+/* Estilos específicos para el primer bloque */
+.block:first-child {
+  background-color: #2A3D45; /* Fondo oscuro */
+  color: #DDC9B4; /* Texto claro */
+}
+
+/* Estilos para los contenedores de información */
+.information-container {
+  display: flex; /* Muestra los elementos en línea con flexbox */
+}
+
+/* Estilos para los elementos de información */
+.information {
+  margin-left: 5px; /* Espacio a la izquierda de 5px */
+}
+
+/* Estilo para la ubicación */
+#location {
+  font-weight: bold; /* Texto en negrita */
+  font-size: 22px; /* Tamaño de fuente grande */
+}
+
+/* Estilos para el cargador de la página */
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%; /* Da forma circular */
+}
+
+/* Estilo principal del cargador */
+.loader {
+  color: #DDC9B4; /* Color del cargador */
+  font-size: 11px; /* Tamaño de la fuente */
+  text-indent: -99999em; /* Oculta el texto "Loading..." */
+  position: relative; /* Posición relativa para el contenido */
+  width: 10em; /* Ancho del cargador */
+  height: 10em; /* Alto del cargador */
+  box-shadow: inset 0 0 0 1em; /* Sombras internas */
+  -webkit-transform: translateZ(0); /* Suaviza la animación en Safari */
+  -ms-transform: translateZ(0); /* Suaviza la animación en IE */
+  transform: translateZ(0); /* Suaviza la animación en otros navegadores */
+}
+
+/* Estilos para los pseudo-elementos del cargador */
+.loader:before,
+.loader:after {
+  position: absolute; /* Posiciona absolutamente en relación con el padre */
+  content: ''; /* Contenido vacío para los elementos de animación */
+}
+
+/* Estilo para el pseudo-elemento :before del cargador */
+.loader:before {
+  width: 5.2em; /* Ancho */
+  height: 10.2em; /* Altura */
+  background: #2A3D45; /* Color de fondo */
+  border-radius: 10.2em 0 0 10.2em; /* Bordes redondeados para crear semicírculo */
+  top: -0.1em; /* Posición superior */
+  left: -0.1em; /* Posición izquierda */
+  -webkit-transform-origin: 5.1em 5.1em; /* Punto de origen para la rotación en Safari */
+  transform-origin: 5.1em 5.1em; /* Punto de origen para la rotación */
+  -webkit-animation: load2 2s infinite ease 1.5s; /* Animación en Safari */
+  animation: load2 2s infinite ease 1.5s; /* Animación en otros navegadores */
+}
+
+/* Estilo para el pseudo-elemento :after del cargador */
+.loader:after {
+  width: 5.2em; /* Ancho */
+  height: 10.2em; /* Altura */
+  background: #2A3D45; /* Color de fondo */
+  border-radius: 0 10.2em 10.2em 0; /* Bordes redondeados para crear semicírculo */
+  top: -0.1em; /* Posición superior */
+  left: 4.9em; /* Posición izquierda */
+  -webkit-transform-origin: 0.1em 5.1em; /* Punto de origen para la rotación en Safari */
+  transform-origin: 0.1em 5.1em; /* Punto de origen para la rotación */
+  -webkit-animation: load2 2s infinite ease; /* Animación en Safari */
+  animation: load2 2s infinite ease; /* Animación en otros navegadores */
+}
+
+/* Definición de la animación para el cargador en Safari */
+@-webkit-keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg); /* Comienza en 0 grados */
+    transform: rotate(0deg); /* Comienza en 0 grados */
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg); /* Gira hasta 360 grados */
+    transform: rotate(360deg); /* Gira hasta 360 grados */
+  }
+}
+
+/* Definición de la animación para otros navegadores */
+@keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg); /* Comienza en 0 grados */
+    transform: rotate(0deg); /* Comienza en 0 grados */
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg); /* Gira hasta 360 grados */
+    transform: rotate(360deg); /* Gira hasta 360 grados */
+  }
+}

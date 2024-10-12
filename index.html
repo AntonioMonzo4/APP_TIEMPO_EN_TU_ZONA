@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Establece el tipo de documento como HTML5 -->
+    <meta charset="utf-8">
+    <!-- Configura la página para que sea compatible con dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página que se muestra en la pestaña del navegador -->
+    <title>Clima en tu lugar</title>
+    <!-- Importa la fuente 'Roboto' desde Google Fonts para usar en el sitio web -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Enlaza el archivo CSS externo 'index.css' para aplicar estilos a la página -->
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="onLoad()">
+    <!-- Muestra un mensaje de carga mientras se obtiene la información del clima -->
+    <div id="loader" class="loader">Loading...</div>
+
+    <!-- Contenedor principal para mostrar la información del clima -->
+    <div id="container" class="contaier">
+        <!-- Bloque para mostrar la ubicación, fecha y descripción del clima -->
+        <div class="block">
+            <!-- Div para mostrar la ubicación actual del usuario -->
+            <div id="location"></div>
+            <!-- Div para mostrar la fecha actual -->
+            <div id="date"></div>
+            <!-- Div para mostrar una descripción del clima (por ejemplo, "Nublado") -->
+            <div id="description"></div>
+        </div>
+
+        <!-- Bloque para mostrar información adicional sobre el clima -->
+        <div class="block">
+            <!-- Contenedor para mostrar la temperatura actual -->
+            <div class="information-container">
+                Temperature
+                <div class="information" id="temperature"></div>
+            </div>
+            <!-- Contenedor para mostrar la humedad actual -->
+            <div class="information-container">
+                Humidity
+                <div class="information" id="humidity"></div>
+            </div>
+            <!-- Contenedor para mostrar la presión atmosférica actual -->
+            <div class="information-container">
+                Pressure
+                <div class="information" id="pressure"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlaza un archivo JavaScript externo 'index.js' para manejar la funcionalidad de la página -->
+    <script src="index.js"></script>
+</body>
+</html>
