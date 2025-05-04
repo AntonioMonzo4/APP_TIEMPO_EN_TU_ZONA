@@ -34,6 +34,4 @@ El archivo JavaScript es el núcleo funcional de la aplicación. Contiene la ló
 
 7. **Función `onLoad`**: Se ejecuta cuando la página se carga y utiliza la API de Geolocalización para obtener la ubicación del usuario, lo que desencadena la obtención de los datos climáticos.
 
-### Resumen
 
-En conjunto, los tres archivos crean una aplicación que muestra el clima en tiempo real de la ubicación actual del usuario. El HTML proporciona la estructura básica, el CSS estiliza la interfaz para hacerla visualmente atractiva, y el JavaScript gestiona la lógica para obtener, formatear y mostrar los datos climáticos. La experiencia de usuario se optimiza al utilizar un cargador animado mientras se cargan los datos y al actualizar automáticamente el contenido de la página cuando los datos están disponibles.
